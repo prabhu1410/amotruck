@@ -12,9 +12,7 @@ class AdminController extends Controller
 {
     
     
-    public function teammem(){
-        return view('admin.team_members');
-    }
+  
 
     public function settings(){
         return view('admin.settings');

@@ -55,7 +55,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/forms/basic_elements.html">
+              <a class="nav-link" href="{{url('marketing_view')}}">
                 <span class="menu-title">Marketing</span>
                 <i class="mdi mdi-android-messages menu-icon"></i>
               </a>
