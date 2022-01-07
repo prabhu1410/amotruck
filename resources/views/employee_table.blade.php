@@ -1,5 +1,10 @@
-<div class="container"> 
-          <table class="table table-dark table-striped">
+
+
+<div class="container-fluid flex"> 
+
+  
+  
+          <table id="datatable" class="table table-dark table-striped">
 
             <thead>
             
@@ -20,27 +25,33 @@
             </thead>
 
             <tbody>
-            @foreach($teams as $team)
+            @foreach($employees as $team)
               <tr>
                 
-                <td>{{ $team['id'] }}</td>
-                <td>{{ $team['fname'] }}</td>
-                <td>{{ $team['lname'] }}</td>
-                <td>{{ $team['email'] }}</td>
-                <td>{{ $team['phone'] }}</td>
-                <td>{{ $team['address'] }}</td>
-                <td>{{ $team['role'] }}</td>
-                <td>{{ $team['type'] }}</td>
-                <td>{{ $team['status'] }}</td>
+                <td>{{ $team->id }}</td>
+                <td>{{ $team->fname }}</td>
+                <td>{{ $team->lname }}</td>
+                <td>{{ $team->email }}</td>
+                <td>{{ $team->phone }}</td>
+                <td>{{ $team->address }}</td>
+                <td>{{ $team->role }}</td>
+                <td>{{ $team->type }}</td>
+                <td>{{ $team->status }}</td>
                 <td>
-                  <a href="" class="btn btn-success"> EDIT </a>
-                  <a href="" class="btn btn-danger"> DELETE </a>
+                  <button type="button" value="{{$team->id}}"  class="btn btn-gradient-success editbtn btn-sm"> UPDATE </button>
+                  <button type="button" value="{{$team->id}}"  class="btn btn-gradient-danger deletebtn btn-sm"> DELETE </button>
+                  
+                  
                 </td>
-               
+                
               </tr>
               @endforeach
             </tbody>
   
           </table>
-        
+
+
+
+              
+
         </div>

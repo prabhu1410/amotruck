@@ -28,13 +28,21 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('/dashboard_view',[DashboardController::class,'dashboard']);
 
-Route::get('/team_members_view',[AdminController::class,'teammem']);
+Route::get('/team_members_view',[EmployeeController::class,'intex']);
 
 Route::get('/settings_view',[AdminController::class,'settings']);
 
-Route::post('/employee',[AdminController::class,'employee']);
+Route::post('/employee',[EmployeeController::class,'store']);
 
-Route::get('/team_members_view',[EmployeeController::class,'show']);
+Route::get('update-employee/{id}',[EmployeeController::class,'edit']);
+
+Route::put('update-employee',[EmployeeController::class,'update']);
+
+Route::delete('delete-employee',[EmployeeController::class,'destroy']);
+
+// Route::get('/team_members_view',[EmployeeController::class,'show']);
+
+
 
 
 

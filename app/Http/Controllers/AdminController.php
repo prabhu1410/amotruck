@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Employee;
 
+use DB;
+
 class AdminController extends Controller
 {
     
@@ -18,23 +20,8 @@ class AdminController extends Controller
         return view('admin.settings');
     }
 
-    public function employee(Request $request){
-        $employees = new Employee;
-        
-        $employees->fname = $request->fname;
-        $employees->lname = $request->lname;
-        $employees->email = $request->email;
-        $employees->phone = $request->phone;
-        $employees->address = $request->address;
-        $employees->role = $request->role;
-        $employees->type = $request->type;
-        $employees->status = $request->status;
 
-        $employees->save();
-
-        return redirect()->back();
-    }
-
+   
     
 
 }
